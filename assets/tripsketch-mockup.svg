@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ts-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061a14"/>
+      <stop offset="100%" stop-color="#0b2e23"/>
+    </linearGradient>
+    <linearGradient id="emerald-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="16" fill="url(#ts-bg)"/>
+  <rect x="0.5" y="0.5" width="799" height="449" rx="15.5" fill="none" stroke="#134e3f" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="48" rx="16" fill="#08281f"/>
+  <circle cx="28" cy="24" r="6" fill="#ff5f56"/>
+  <circle cx="48" cy="24" r="6" fill="#ffbd2e"/>
+  <circle cx="68" cy="24" r="6" fill="#27c93f"/>
+  <text x="100" y="29" fill="#6ee7b7" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700">TripSketch 🗺️ · Tamil Nadu AI Travel Planner</text>
+  <rect x="610" y="12" width="165" height="24" rx="12" fill="rgba(16,185,129,0.2)"/>
+  <text x="625" y="28" fill="#34d399" font-family="monospace" font-size="11" font-weight="700">AI SMART ENGINE</text>
+
+  <!-- Left: Trip Configuration inputs -->
+  <g transform="translate(35, 75)">
+    <rect width="320" height="340" rx="12" fill="#062119" stroke="#134e3f"/>
+    <text x="20" y="32" fill="#ecfdf5" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="700">Tamil Nadu Trip Planner</text>
+    
+    <!-- District input -->
+    <text x="20" y="65" fill="#a7f3d0" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">STEP 1: SELECT DISTRICT</text>
+    <rect x="20" y="75" width="280" height="36" rx="8" fill="#0d3b2e" stroke="#10b981"/>
+    <text x="32" y="98" fill="#ffffff" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">Thanjavur &amp; Delta Hub</text>
+
+    <!-- Days & Budget in 2 cols -->
+    <text x="20" y="135" fill="#a7f3d0" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">STEP 2: DURATION</text>
+    <rect x="20" y="145" width="130" height="36" rx="8" fill="#0d3b2e" stroke="#134e3f"/>
+    <text x="32" y="168" fill="#ffffff" font-family="-apple-system,system-ui,sans-serif" font-size="13">3 Days</text>
+
+    <text x="170" y="135" fill="#a7f3d0" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">STEP 3: BUDGET</text>
+    <rect x="170" y="145" width="130" height="36" rx="8" fill="#0d3b2e" stroke="#134e3f"/>
+    <text x="182" y="168" fill="#fbbf24" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">₹ 8,500</text>
+
+    <!-- Nearby Districts detected -->
+    <text x="20" y="210" fill="#a7f3d0" font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="600">NEARBY DISTRICTS CLUSTERS</text>
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="85" height="26" rx="6" fill="#134e3f"/>
+      <text x="8" y="17" fill="#6ee7b7" font-size="11">Kumbakonam</text>
+      <rect x="92" y="0" width="75" height="26" rx="6" fill="#134e3f"/>
+      <text x="100" y="17" fill="#6ee7b7" font-size="11">Chettinad</text>
+      <rect x="174" y="0" width="70" height="26" rx="6" fill="#134e3f"/>
+      <text x="182" y="17" fill="#6ee7b7" font-size="11">Trichy</text>
+    </g>
+
+    <!-- CTA Button -->
+    <rect x="20" y="270" width="280" height="42" rx="10" fill="url(#emerald-glow)"/>
+    <text x="75" y="296" fill="#042f24" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="800">GENERATE AI ITINERARY</text>
+  </g>
+
+  <!-- Right: Generated Itinerary Preview -->
+  <g transform="translate(380, 75)">
+    <rect width="385" height="340" rx="12" fill="#062119" stroke="#134e3f"/>
+    <text x="20" y="32" fill="#ecfdf5" font-family="-apple-system,system-ui,sans-serif" font-size="15" font-weight="700">AI Generated Travel Schedule</text>
+
+    <!-- Day 1 -->
+    <g transform="translate(20, 50)">
+      <circle cx="12" cy="12" r="10" fill="#10b981"/>
+      <text x="12" y="16" fill="#042f24" font-size="10" font-weight="800" text-anchor="middle">1</text>
+      <text x="32" y="16" fill="#34d399" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">Day 1: Chola Grandeur &amp; Royal Palace</text>
+      <rect x="32" y="25" width="310" height="48" rx="6" fill="#0d3b2e"/>
+      <text x="44" y="44" fill="#ecfdf5" font-size="11">Brihadeeswarar Temple (Morning) &gt; Royal Palace Museum</text>
+      <text x="44" y="60" fill="#fbbf24" font-size="10">Food: Authentic Ashoka Halwa &amp; Thanjavur Degree Coffee</text>
+    </g>
+
+    <!-- Day 2 -->
+    <g transform="translate(20, 135)">
+      <circle cx="12" cy="12" r="10" fill="#10b981"/>
+      <text x="12" y="16" fill="#042f24" font-size="10" font-weight="800" text-anchor="middle">2</text>
+      <text x="32" y="16" fill="#34d399" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">Day 2: Temple Hub &amp; Mahamaham</text>
+      <rect x="32" y="25" width="310" height="48" rx="6" fill="#0d3b2e"/>
+      <text x="44" y="44" fill="#ecfdf5" font-size="11">Kumbakonam Mahamaham Tank &gt; Airavatesvara Temple</text>
+      <text x="44" y="60" fill="#fbbf24" font-size="10">Stay: Heritage Homestay · Est: ₹1,800/night</text>
+    </g>
+
+    <!-- Day 3 -->
+    <g transform="translate(20, 220)">
+      <circle cx="12" cy="12" r="10" fill="#10b981"/>
+      <text x="12" y="16" fill="#042f24" font-size="10" font-weight="800" text-anchor="middle">3</text>
+      <text x="32" y="16" fill="#34d399" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="700">Day 3: Chettinad Mansions &amp; Flavors</text>
+      <rect x="32" y="25" width="310" height="48" rx="6" fill="#0d3b2e"/>
+      <text x="44" y="44" fill="#ecfdf5" font-size="11">Kanadukathan 1000-window Palace &gt; Athangudi Tile Factory</text>
+      <text x="44" y="60" fill="#fbbf24" font-size="10">Culinary: Chettinad Pepper Curry &amp; Seepu Seedai</text>
+    </g>
+
+    <!-- Total Cost Meter -->
+    <g transform="translate(20, 305)">
+      <text x="0" y="15" fill="#a7f3d0" font-size="11">Budget Allocation: ₹8,150 / ₹8,500 (Saved ₹350)</text>
+      <rect x="245" y="4" width="95" height="18" rx="4" fill="rgba(16,185,129,0.2)"/>
+      <text x="253" y="16" fill="#34d399" font-size="10" font-weight="700">OPTIMAL</text>
+    </g>
+  </g>
+</svg>

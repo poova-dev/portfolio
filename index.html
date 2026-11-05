@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poovaragavan A — Full Stack Developer & AI Builder</title>
+  <meta name="description" content="Portfolio of Poovaragavan A — Full Stack Developer building modern, scalable and user-focused web applications with JavaScript, React, Node.js and AI-powered tools." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Poovaragavan A — Full Stack Developer" />
+  <meta property="og:description" content="Building modern, scalable web applications & AI products. Full Stack Developer @ Flyggo." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- CursorSwarm Agent Cloak (prevents flash of content before agents build) -->
+  <script src="cursor-swarm.js"></script>
+  <script>
+    if (window.CursorSwarm) {
+      CursorSwarm.cloak();
+    }
+  </script>
+</head>
+<body>
+  <!-- Ambient background grid -->
+  <div class="bg-grid" data-cs-ignore></div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        POOVA<span>.</span>DEV
+        <span class="logo-sub">FLYGGO</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#focus">Focus</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Hire / Connect</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="badge badge-pulse">
+              <span class="pulse-dot"></span>
+              Full Stack Developer @ Flyggo · Tamil Nadu, India
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            POOVARAGAVAN <span class="text-gradient">A</span>
+          </h1>
+
+          <div class="hero-role-wrapper font-mono">
+            <span>&gt; </span>
+            <span id="roleTypewriter">Full Stack Developer</span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-desc">
+            Full Stack Developer building modern, scalable and user-focused web applications with JavaScript, React, Node.js and AI-powered tools. Crafting robust backends, reactive interfaces, and practical digital solutions.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="https://github.com/Poovaragavan2004" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/poova-ragavan/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-val">&lt; 1<span>yr</span></div>
+              <div class="stat-label">Flyggo Exp</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val">04<span>+</span></div>
+              <div class="stat-label">Featured Apps</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val">M.Sc.<span>1st</span></div>
+              <div class="stat-label">Computer Science</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val">7.8<span>★</span></div>
+              <div class="stat-label">B.Sc. CGPA</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Image & Chips -->
+        <div class="hero-visual">
+          <div class="floating-chip chip-1">
+            <span class="text-cyan">⚛</span>
+            <span>React &amp; Node.js</span>
+          </div>
+
+          <div class="portrait-frame">
+            <div class="portrait-inner">
+              <img src="assets/poova-avatar.jpg" alt="Poovaragavan A - Full Stack Developer" width="400" height="500" />
+              <div class="portrait-overlay-glow"></div>
+              <div class="portrait-caption">
+                <div>
+                  <div class="portrait-name">Poovaragavan A</div>
+                  <div class="portrait-role">Full Stack Developer</div>
+                </div>
+                <span class="badge" style="background: rgba(16,185,129,0.2); color: #34d399; border-color: rgba(16,185,129,0.4);">
+                  Active
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-chip chip-2">
+            <span class="text-purple">⚡</span>
+            <span>AI Tools &amp; Groq</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// ABOUT ME</span>
+          <h2 class="section-title">Developer &amp; Product Craftsman</h2>
+          <p class="section-subtitle">Bridging full-stack engineering, practical product design, and modern AI capability.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <p class="about-p">
+              I am <strong>Poovaragavan</strong>, a Full Stack Developer focused on building modern web applications, AI-powered products, and practical digital solutions.
+            </p>
+            <p class="about-p">
+              I work across both frontend and backend development with strong foundations in <strong>HTML, CSS, JavaScript, React.js, Node.js, PHP, MySQL, Firebase</strong> and seamless <strong>API integration</strong>.
+            </p>
+            <p class="about-p">
+              Beyond core web engineering, I am deeply passionate about <strong>AI application development, developer tooling, product building, UI/UX</strong>, and Android ecosystems.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <h4>💼 Current Role</h4>
+                <p>Full Stack Developer at <strong>Flyggo</strong> (Started July 2026), building and deploying scalable web apps.</p>
+              </div>
+              <div class="highlight-box">
+                <h4>🎓 Academic Journey</h4>
+                <p>Pursuing <strong>M.Sc. Computer Science</strong> (1st Year) · B.Sc. Computer Science (Bharathidasan University, 7.8 CGPA).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo Gallery Showcase -->
+          <div class="about-gallery">
+            <div class="gallery-photo photo-tall">
+              <img src="assets/photo-portrait-1.jpg" alt="Poovaragavan portrait" loading="lazy" />
+            </div>
+            <div class="gallery-photo photo-wide">
+              <img src="assets/photo-landscape.jpg" alt="Poovaragavan workspace" loading="lazy" />
+            </div>
+            <div class="gallery-photo photo-wide">
+              <img src="assets/photo-portrait-2.jpg" alt="Poovaragavan at event" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER FOCUS PILLARS -->
+    <section class="section" id="focus" style="background: rgba(255,255,255,0.01);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// CORE SPECIALIZATIONS</span>
+          <h2 class="section-title">Focused Domains, Not False Claims</h2>
+          <p class="section-subtitle">
+            Rather than claiming to know everything, here are the exact core areas where I deliver high impact and reliable code.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <div class="focus-card">
+            <div class="focus-icon">🌐</div>
+            <h3>Full Stack Web Dev</h3>
+            <p>End-to-end web architecture, component lifecycles, state management, and reliable deployment workflows.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">⚛️</div>
+            <h3>React Development</h3>
+            <p>Building high-performance, responsive single-page applications with reusable hooks, context, and modern styling.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🔌</div>
+            <h3>Backend &amp; APIs</h3>
+            <p>Designing RESTful endpoints, authentication mechanisms, Node.js and PHP architectures with robust data flow.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🤖</div>
+            <h3>AI-Powered Apps</h3>
+            <p>Integrating LLMs (Groq, Llama 3.3, Gemini), voice recognition, multimodal pipelines, and smart prompt logic.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🚀</div>
+            <h3>Product Development</h3>
+            <p>Translating user pain points into shipping MVPs with practical utility, from local discovery to emergency tools.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🎨</div>
+            <h3>UI/UX Implementation</h3>
+            <p>Clean typography, responsive glassmorphism, accessibility, and intuitive interactions that delight users.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🔥</div>
+            <h3>Firebase Applications</h3>
+            <p>Firestore real-time listeners, document schema design, security rules, multiplayer sync, and cloud storage.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🛠️</div>
+            <h3>AI-Assisted Dev</h3>
+            <p>Leveraging Cursor, Codex, Google AI Studio, and modern dev tools to accelerate engineering speed and code quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS (BENTO GRID) -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// TECHNICAL ARSENAL</span>
+          <h2 class="section-title">Tools &amp; Technologies</h2>
+          <p class="section-subtitle">A balanced toolkit spanning modern frontend frameworks, server runtimes, databases, and AI tooling.</p>
+        </div>
+
+        <div class="skills-bento">
+          <!-- 1. Frontend -->
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <div class="category-icon text-cyan">💻</div>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">React.js</span>
+              <span class="skill-tag featured">JavaScript (ES6+)</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">jQuery</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- 2. Backend & APIs -->
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <div class="category-icon text-purple">⚙️</div>
+              <h3>Backend &amp; APIs</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">Node.js</span>
+              <span class="skill-tag featured">REST APIs</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">API Integration</span>
+              <span class="skill-tag">Webhooks</span>
+              <span class="skill-tag">Microservices</span>
+            </div>
+          </div>
+
+          <!-- 3. Databases -->
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <div class="category-icon text-green">🗄️</div>
+              <h3>Databases &amp; Storage</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">MySQL</span>
+              <span class="skill-tag featured">Firebase</span>
+              <span class="skill-tag featured">Cloud Firestore</span>
+              <span class="skill-tag">Cloudinary</span>
+              <span class="skill-tag">Relational Modeling</span>
+              <span class="skill-tag">Query Optimization</span>
+            </div>
+          </div>
+
+          <!-- 4. Languages -->
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <div class="category-icon text-cyan">⚡</div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">JavaScript</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <!-- 5. Platforms & Cloud -->
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <div class="category-icon text-purple">☁️</div>
+              <h3>Tools &amp; Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">Git &amp; GitHub</span>
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">Cloudflare</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Hostinger</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Postman</span>
+            </div>
+          </div>
+
+          <!-- 6. AI & Developer Tools -->
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <div class="category-icon text-green">🧠</div>
+              <h3>AI &amp; Developer Tools</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">Google AI Studio</span>
+              <span class="skill-tag featured">Gemini API</span>
+              <span class="skill-tag">Groq &amp; Llama 3.3</span>
+              <span class="skill-tag">ChatGPT &amp; Claude</span>
+              <span class="skill-tag">Cursor IDE</span>
+              <span class="skill-tag">Lovable</span>
+              <span class="skill-tag">Codex</span>
+              <span class="skill-tag">AI-Assisted Workflows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// SHOWCASE</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications spanning AI healthcare triage, local discovery, real-time gaming, and travel tech.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- 1. ReliefMind Triage -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/reliefmind-mockup.svg" alt="ReliefMind Triage App Mockup" loading="lazy" />
+              <div class="project-badge-float" style="color: #ef4444; border-color: rgba(239,68,68,0.4);">
+                AI EMERGENCY
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-title-row">
+                <h3 class="project-title">ReliefMind Triage</h3>
+              </div>
+              <div class="project-subtitle">AI-Powered Emergency Triage Application</div>
+
+              <p class="project-desc">
+                A multilingual emergency triage platform built to eliminate critical communication delays during medical crises. Patients or caregivers communicate symptoms via speech or text in native languages, with real-time AI triage classification and emergency dispatch recommendations.
+              </p>
+
+              <!-- Interactive Triage Simulator -->
+              <div class="interactive-panel">
+                <div class="panel-header">
+                  <span class="panel-title">⚡ Interactive Triage Simulator</span>
+                  <span class="font-mono text-dim" style="font-size:0.75rem;">Groq + Llama 3.3</span>
+                </div>
+                <div class="triage-tester-row">
+                  <input type="text" id="triageInput" class="triage-input" value="நெஞ்சு வலி கடுமையான அழுத்தம், மூச்சு திணறல்" placeholder="Enter symptom in Tamil or English..." />
+                  <button class="btn btn-primary btn-sm" id="btnTestTriage">Assess</button>
+                </div>
+                <div id="triageOutput" class="trip-result-box">
+                  <span class="triage-output-badge triage-crit">LEVEL 1: CRITICAL</span>
+                  <span style="margin-left: 8px;">Cardiac emergency detected. 108 Emergency Ambulance routing recommended.</span>
+                </div>
+              </div>
+
+              <ul class="project-features">
+                <li><strong>Multilingual Support:</strong> Tamil, English, and Hindi voice and text input.</li>
+                <li><strong>Groq &amp; Llama 3.3 Inference:</strong> Instant clinical entity extraction with sub-400ms latency.</li>
+                <li><strong>Emergency-First UX:</strong> High-contrast vital signs display and one-tap paramedic routing.</li>
+              </ul>
+
+              <div class="project-techs">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Groq API</span>
+                <span class="tech-pill">Llama 3.3</span>
+                <span class="tech-pill">Voice Web API</span>
+                <span class="tech-pill">Vercel</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/poova-dev/reliefmind-triage" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <span>View Repository</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. NammaMap -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/nammamap-mockup.svg" alt="NammaMap Platform Mockup" loading="lazy" />
+              <div class="project-badge-float" style="color: #38bdf8; border-color: rgba(56,189,248,0.4);">
+                LOCAL DISCOVERY
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-title-row">
+                <h3 class="project-title">NammaMap</h3>
+              </div>
+              <div class="project-subtitle">Tamil Nadu Local Discovery &amp; Hidden Gems Platform</div>
+
+              <p class="project-desc">
+                A community-first local exploration portal connecting residents and tourists with neighborhood businesses, indigenous artisans, cultural gatherings, and hidden heritage spots across Tamil Nadu.
+              </p>
+
+              <ul class="project-features">
+                <li><strong>Local Business Discovery:</strong> Dynamic database of traditional stores, food hubs, and services.</li>
+                <li><strong>Cultural Events:</strong> Real-time event announcements and community registration.</li>
+                <li><strong>Hidden Gems Index:</strong> Curated offbeat destinations with authentic visitor reviews.</li>
+                <li><strong>Admin CMS Portal:</strong> Secure moderation dashboard built for content verification.</li>
+              </ul>
+
+              <div class="project-techs">
+                <span class="tech-pill">PHP 8.x</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Bootstrap</span>
+                <span class="tech-pill">HTML5 / CSS3</span>
+              </div>
+
+              <div class="project-actions">
+                <span class="badge" style="background: rgba(56,189,248,0.1); color: #38bdf8; border-color: rgba(56,189,248,0.3);">
+                  Production Ready Architecture
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. King & Queen ♟️ -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/kingqueen-mockup.svg" alt="King & Queen Chess Application Mockup" loading="lazy" />
+              <div class="project-badge-float" style="color: #c084fc; border-color: rgba(192,132,252,0.4);">
+                REAL-TIME MULTIPLAYER
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-title-row">
+                <h3 class="project-title">King &amp; Queen ♟️</h3>
+              </div>
+              <div class="project-subtitle">Couple-Focused Realtime Chess Experience</div>
+
+              <p class="project-desc">
+                A custom chess web application designed around couple play and shared game moments. Features private two-player room architectures with instantaneous move replication via Cloud Firestore, game replay logs, and personalized emotion reactions.
+              </p>
+
+              <ul class="project-features">
+                <li><strong>Custom Room Codes:</strong> Instant couple matchmaking with private room hashes (e.g. #KQ-7729).</li>
+                <li><strong>Firestore Real-time Sync:</strong> Sub-50ms piece movement sync and turn clock management.</li>
+                <li><strong>Game State Recovery:</strong> Persistent match history and move annotations saved to the cloud.</li>
+              </ul>
+
+              <div class="project-techs">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Firebase Firestore</span>
+                <span class="tech-pill">WebSockets</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/poova-dev/king-queen" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <span>View Repository</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. TripSketch 🗺️ -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/tripsketch-mockup.svg" alt="TripSketch AI Travel Planner Mockup" loading="lazy" />
+              <div class="project-badge-float" style="color: #34d399; border-color: rgba(52,211,153,0.4);">
+                AI TRAVEL PLANNER
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-title-row">
+                <h3 class="project-title">TripSketch 🗺️</h3>
+              </div>
+              <div class="project-subtitle">Tamil Nadu-Focused AI Travel Planner</div>
+
+              <p class="project-desc">
+                An intelligent local travel itinerary generator tailored specifically to Tamil Nadu's heritage corridors. Input your <strong>District + Number of Days + Budget</strong>, and the AI algorithm crafts an optimal route covering adjacent districts, temple architecture, and legendary food spots.
+              </p>
+
+              <!-- Live Interactive Trip Generator Widget -->
+              <div class="interactive-panel">
+                <div class="panel-header">
+                  <span class="panel-title">🗺️ Live TripSketch Planner</span>
+                  <span class="font-mono text-dim" style="font-size:0.75rem;">Interactive Demo</span>
+                </div>
+                <div class="trip-inputs-row">
+                  <select id="tripDistrict" class="trip-select">
+                    <option value="Thanjavur">Thanjavur (Delta Hub)</option>
+                    <option value="Madurai">Madurai (Temple City)</option>
+                    <option value="Chennai">Chennai (Coastal Heritage)</option>
+                    <option value="Nilgiris">Nilgiris (Ooty &amp; Hills)</option>
+                    <option value="Kanyakumari">Kanyakumari (Southern Tip)</option>
+                  </select>
+                  <select id="tripDays" class="trip-select">
+                    <option value="2">2 Days</option>
+                    <option value="3" selected>3 Days</option>
+                    <option value="5">5 Days</option>
+                  </select>
+                  <input type="text" id="tripBudget" class="trip-input" value="₹8,500" placeholder="Budget (₹)" />
+                </div>
+                <button class="btn btn-primary btn-sm" id="btnPlanTrip" style="width: 100%; margin-bottom: 10px;">
+                  ✨ Generate AI Itinerary
+                </button>
+                <div id="tripResult" class="trip-result-box">
+                  <strong>Day 1:</strong> Brihadeeswarar Temple &amp; Royal Palace (Food: Degree Coffee &amp; Halwa)<br />
+                  <strong>Day 2:</strong> Kumbakonam Mahamaham Tank &amp; Darasuram (Stay: ₹1,800/night)<br />
+                  <strong>Day 3:</strong> Chettinad Mansions &amp; Athangudi (Pepper Chicken &amp; Seepu Seedai)
+                </div>
+              </div>
+
+              <ul class="project-features">
+                <li><strong>District-Cluster Matching:</strong> Computes nearest district hops (e.g. Thanjavur &rarr; Kumbakonam &rarr; Chettinad).</li>
+                <li><strong>Budget-Aware Route Optimizer:</strong> Allocates stay, transport, and food quotas with zero budget overrun.</li>
+                <li><strong>Authentic Culinary Highlights:</strong> Curates authentic regional delicacies not listed in generic guides.</li>
+              </ul>
+
+              <div class="project-techs">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">AI Engine APIs</span>
+                <span class="tech-pill">TN Tourism Data</span>
+                <span class="tech-pill">Tailwind CSS</span>
+              </div>
+
+              <div class="project-actions">
+                <span class="badge" style="background: rgba(52,211,153,0.1); color: #34d399; border-color: rgba(52,211,153,0.3);">
+                  Tamil Nadu Tourism Specialized
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE & EDUCATION -->
+    <section class="section" id="experience" style="background: rgba(255,255,255,0.01);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// CAREER PATH</span>
+          <h2 class="section-title">Experience &amp; Education</h2>
+          <p class="section-subtitle">Real-world commercial software development paired with continuous computer science education.</p>
+        </div>
+
+        <div class="exp-timeline">
+          <!-- Item 1: Flyggo -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="timeline-title">Full Stack Developer</h3>
+                  <div class="timeline-company">Flyggo</div>
+                </div>
+                <span class="timeline-date">July 2026 – Present</span>
+              </div>
+
+              <p class="timeline-desc">
+                Leading full-stack engineering initiatives, architecting responsive frontend interfaces, writing and consuming internal &amp; external APIs, and managing continuous deployment pipelines.
+              </p>
+
+              <ul class="timeline-responsibilities">
+                <li>Commercial website development and feature delivery</li>
+                <li>Modern responsive UI development across all screen sizes</li>
+                <li>Backend integration and secure RESTful API orchestration</li>
+                <li>Cloud deployment, performance optimization, and bug fixing</li>
+              </ul>
+
+              <div class="project-techs" style="margin-bottom: 0;">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: M.Sc. Computer Science -->
+          <div class="timeline-item">
+            <div class="timeline-dot cyan"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="timeline-title">M.Sc. in Computer Science</h3>
+                  <div class="timeline-company">Currently Pursuing — 1st Year</div>
+                </div>
+                <span class="timeline-date">2025 – Present</span>
+              </div>
+
+              <p class="timeline-desc">
+                Advanced studies in distributed systems, modern algorithms, cloud software design, and artificial intelligence architectures.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: B.Sc. Computer Science -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="timeline-title">B.Sc. in Computer Science</h3>
+                  <div class="timeline-company">Bharathidasan University</div>
+                </div>
+                <span class="timeline-date">2022 – 2025 · CGPA: 7.8</span>
+              </div>
+
+              <p class="timeline-desc">
+                Solid academic grounding in object-oriented programming, data structures, relational database management systems (RDBMS), operating systems, and web technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// GET IN TOUCH</span>
+          <h2 class="section-title">Let's Build Something Great</h2>
+          <p class="section-subtitle">Have a project, role, or collaboration in mind? Feel free to reach out directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels -->
+          <div class="contact-card">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Contact Channels</h3>
+            
+            <a href="https://www.linkedin.com/in/poova-ragavan/" target="_blank" rel="noopener noreferrer" class="contact-channel">
+              <div class="channel-icon">in</div>
+              <div class="channel-info">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/poova-ragavan</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/Poovaragavan2004" target="_blank" rel="noopener noreferrer" class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="channel-info">
+                <h4>GitHub</h4>
+                <p>github.com/Poovaragavan2004</p>
+              </div>
+            </a>
+
+            <div class="contact-channel">
+              <div class="channel-icon">📍</div>
+              <div class="channel-info">
+                <h4>Location</h4>
+                <p>Tamil Nadu, India</p>
+              </div>
+            </div>
+
+            <div class="contact-channel">
+              <div class="channel-icon">🌐</div>
+              <div class="channel-info">
+                <h4>Live Portfolio</h4>
+                <p>poovaragavan.ccbp.tech</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="contact-card">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Send a Direct Note</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="senderName">Your Name</label>
+                <input type="text" id="senderName" class="form-control" placeholder="John Doe" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderEmail">Email Address</label>
+                <input type="email" id="senderEmail" class="form-control" placeholder="john@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="senderMsg">Message / Project Inquiry</label>
+                <textarea id="senderMsg" class="form-control" placeholder="Hi Poovaragavan, I would love to connect regarding..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <div id="formFeedback" style="display: none; margin-top: 14px; font-size: 0.88rem; color: #34d399; text-align: center;">
+                ✓ Message sent! Opening email client...
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © 2026 <strong>Poovaragavan A</strong> · Built with modern JavaScript &amp; AI
+      </div>
+      <div class="footer-links font-mono">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="https://github.com/Poovaragavan2004" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/poova-ragavan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CURSOR SWARM INTERACTIVE CONTROLLER DOCK -->
+  <aside class="swarm-dock" id="swarmDock" data-cs-ignore>
+    <div class="swarm-badge">
+      <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
+      <span>SWARM</span>
+    </div>
+
+    <button class="swarm-btn" id="btnToggleSwarm" title="Pause or Resume Swarm">
+      ⏸ Pause
+    </button>
+
+    <button class="swarm-btn" id="btnRebuildSwarm" title="Rebuild page live">
+      ↺ Rebuild
+    </button>
+
+    <select id="swarmPaletteSelect" class="palette-picker" title="Change Swarm Palette">
+      <option value="default">Default Palette</option>
+      <option value="neon">Neon Vibe</option>
+      <option value="ocean">Ocean Blue</option>
+      <option value="sunset">Sunset Gold</option>
+      <option value="candy">Candy Pop</option>
+    </select>
+  </aside>
+
+  <!-- MAIN INTERACTIVITY SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>

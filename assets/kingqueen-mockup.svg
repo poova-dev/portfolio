@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="kq-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#110d1f"/>
+      <stop offset="100%" stop-color="#1d1335"/>
+    </linearGradient>
+    <linearGradient id="purple-neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="cyan-neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="16" fill="url(#kq-bg)"/>
+  <rect x="0.5" y="0.5" width="799" height="449" rx="15.5" fill="none" stroke="#3b2d54" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="48" rx="16" fill="#18112b"/>
+  <circle cx="28" cy="24" r="6" fill="#ff5f56"/>
+  <circle cx="48" cy="24" r="6" fill="#ffbd2e"/>
+  <circle cx="68" cy="24" r="6" fill="#27c93f"/>
+  <text x="100" y="29" fill="#c084fc" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="700">KING &amp; QUEEN ♟️ · Couple Chess Application</text>
+  <rect x="630" y="12" width="145" height="24" rx="12" fill="rgba(168,85,247,0.2)"/>
+  <text x="642" y="28" fill="#e879f9" font-family="monospace" font-size="11" font-weight="700">ROOM #KQ-7729</text>
+
+  <!-- Left: Chessboard UI -->
+  <g transform="translate(40, 75)">
+    <rect width="340" height="340" rx="12" fill="#24183d" stroke="#583b8a" stroke-width="2"/>
+    <g transform="translate(17, 17)">
+      <rect x="0" y="0" width="51" height="51" fill="#362459"/><rect x="51" y="0" width="51" height="51" fill="#1d1233"/><rect x="102" y="0" width="51" height="51" fill="#362459"/><rect x="153" y="0" width="51" height="51" fill="#1d1233"/><rect x="204" y="0" width="51" height="51" fill="#362459"/><rect x="255" y="0" width="51" height="51" fill="#1d1233"/><rect x="0" y="51" width="51" height="51" fill="#1d1233"/><rect x="51" y="51" width="51" height="51" fill="#362459"/><rect x="102" y="51" width="51" height="51" fill="#1d1233"/><rect x="153" y="51" width="51" height="51" fill="#362459"/><rect x="204" y="51" width="51" height="51" fill="#1d1233"/><rect x="255" y="51" width="51" height="51" fill="#362459"/><rect x="0" y="102" width="51" height="51" fill="#362459"/><rect x="51" y="102" width="51" height="51" fill="#1d1233"/><rect x="102" y="102" width="51" height="51" fill="#362459"/><rect x="153" y="102" width="51" height="51" fill="#1d1233"/><rect x="204" y="102" width="51" height="51" fill="#362459"/><rect x="255" y="102" width="51" height="51" fill="#1d1233"/><rect x="0" y="153" width="51" height="51" fill="#1d1233"/><rect x="51" y="153" width="51" height="51" fill="#362459"/><rect x="102" y="153" width="51" height="51" fill="#1d1233"/><rect x="153" y="153" width="51" height="51" fill="#362459"/><rect x="204" y="153" width="51" height="51" fill="#1d1233"/><rect x="255" y="153" width="51" height="51" fill="#362459"/><rect x="0" y="204" width="51" height="51" fill="#362459"/><rect x="51" y="204" width="51" height="51" fill="#1d1233"/><rect x="102" y="204" width="51" height="51" fill="#362459"/><rect x="153" y="204" width="51" height="51" fill="#1d1233"/><rect x="204" y="204" width="51" height="51" fill="#362459"/><rect x="255" y="204" width="51" height="51" fill="#1d1233"/><rect x="0" y="255" width="51" height="51" fill="#1d1233"/><rect x="51" y="255" width="51" height="51" fill="#362459"/><rect x="102" y="255" width="51" height="51" fill="#1d1233"/><rect x="153" y="255" width="51" height="51" fill="#362459"/><rect x="204" y="255" width="51" height="51" fill="#1d1233"/><rect x="255" y="255" width="51" height="51" fill="#362459"/>
+      <rect x="102" y="153" width="51" height="51" fill="rgba(168,85,247,0.3)" stroke="#c084fc" stroke-width="2"/>
+      <rect x="153" y="102" width="51" height="51" fill="rgba(6,182,212,0.3)" stroke="#38bdf8" stroke-width="2"/>
+
+      <text x="25" y="38" font-size="28" text-anchor="middle" fill="#f472b6">♞</text>
+      <text x="76" y="38" font-size="28" text-anchor="middle" fill="#f472b6">♝</text>
+      <text x="128" y="38" font-size="30" text-anchor="middle" fill="#f472b6">♛</text>
+      <text x="179" y="38" font-size="32" text-anchor="middle" fill="#f472b6">♚</text>
+      <text x="230" y="38" font-size="28" text-anchor="middle" fill="#f472b6">♝</text>
+      <text x="281" y="38" font-size="28" text-anchor="middle" fill="#f472b6">♜</text>
+
+      <text x="25" y="89" font-size="22" text-anchor="middle" fill="#f472b6">♟</text>
+      <text x="76" y="89" font-size="22" text-anchor="middle" fill="#f472b6">♟</text>
+      <text x="179" y="140" font-size="22" text-anchor="middle" fill="#f472b6">♟</text>
+
+      <text x="25" y="293" font-size="28" text-anchor="middle" fill="#38bdf8">♖</text>
+      <text x="76" y="293" font-size="28" text-anchor="middle" fill="#38bdf8">♗</text>
+      <text x="128" y="293" font-size="32" text-anchor="middle" fill="#38bdf8">♔</text>
+      <text x="179" y="293" font-size="30" text-anchor="middle" fill="#38bdf8">♕</text>
+      <text x="230" y="293" font-size="28" text-anchor="middle" fill="#38bdf8">♘</text>
+      <text x="281" y="293" font-size="28" text-anchor="middle" fill="#38bdf8">♖</text>
+      <text x="128" y="191" font-size="30" text-anchor="middle" fill="#38bdf8">♕</text>
+    </g>
+  </g>
+
+  <!-- Right: Couple Match & Firestore Sync Panel -->
+  <g transform="translate(420, 75)">
+    <rect width="340" height="340" rx="12" fill="#1b122e" stroke="#3b2d54"/>
+    
+    <rect x="20" y="20" width="300" height="70" rx="10" fill="#281a44" stroke="#ec4899"/>
+    <circle cx="55" cy="55" r="20" fill="url(#purple-neon)"/>
+    <text x="55" y="62" fill="#fff" font-size="16" text-anchor="middle" font-weight="700">Q</text>
+    <text x="90" y="47" fill="#fdf4ff" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700">Queen Player</text>
+    <text x="90" y="67" fill="#f472b6" font-family="-apple-system,system-ui,sans-serif" font-size="12">Turn Timer: 02:45 · Moves: 14</text>
+    <circle cx="295" cy="45" r="5" fill="#10b981"/>
+
+    <!-- Player 2 -->
+    <rect x="20" y="105" width="300" height="70" rx="10" fill="#281a44" stroke="#38bdf8"/>
+    <circle cx="55" cy="140" r="20" fill="url(#cyan-neon)"/>
+    <text x="55" y="147" fill="#fff" font-size="16" text-anchor="middle" font-weight="700">K</text>
+    <text x="90" y="132" fill="#f0f9ff" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700">King Player</text>
+    <text x="90" y="152" fill="#38bdf8" font-family="-apple-system,system-ui,sans-serif" font-size="12">Thinking... (Your move)</text>
+
+    <!-- Firestore Realtime Status -->
+    <rect x="20" y="195" width="300" height="125" rx="10" fill="#140c24" stroke="#4c1d95"/>
+    <text x="35" y="222" fill="#a855f7" font-family="monospace" font-size="11" font-weight="700">FIRESTORE REAL-TIME ROOM SYNC</text>
+    <text x="35" y="246" fill="#e9d5ff" font-family="-apple-system,system-ui,sans-serif" font-size="12">✓ Multi-room state listening active</text>
+    <text x="35" y="268" fill="#c084fc" font-family="-apple-system,system-ui,sans-serif" font-size="12">✓ Realtime board synchronization (45ms)</text>
+    <text x="35" y="290" fill="#9ca3af" font-family="-apple-system,system-ui,sans-serif" font-size="11">Tech: HTML · CSS · JS · Firebase Firestore</text>
+  </g>
+</svg>
