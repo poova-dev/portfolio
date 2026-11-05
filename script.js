@@ -1,287 +1,285 @@
 /**
- * POOVARAGAVAN A — PORTFOLIO INTERACTIVITY SCRIPT
- * Featuring CursorSwarm Integration, Live Simulators & Smooth UI
+ * POOVARAGAVAN A — ZLL ARCHITECTURAL RUNTIME ENGINE
+ * White, Black & Electric Purple Edition
+ *
+ * Core Modules:
+ * 1. Vault Door Sliding Loader (000-100 count-up + split panel doors)
+ * 2. Scroll Progress & HUD Status Tracker
+ * 3. Dynamic Knowledge, Projects & Life Grid Renderer
+ * 4. Autonomous Cursor Agent Swarm Engine
+ * 5. 3D Perspective Card Tilt Interactions
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // ========================================================
-  // 1. CURSOR-SWARM INITIALIZATION
-  // ========================================================
-  let swarmInstance = null;
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-  try {
-    if (typeof CursorSwarm !== 'undefined') {
-      swarmInstance = new CursorSwarm({
-        cursors: 3,
-        agents: [
-          { name: 'POOVA', color: '#7f5af0', role: 'layout' },
-          { name: 'REACT_BOT', color: '#00f0ff', role: 'type' },
-          { name: 'AI_AGENT', color: '#10b981', role: 'media' }
-        ],
-        deconstruct: false,         // Keep content built once drawn for best reading experience
-        hud: true,                  // Show status pill
-        hudPosition: 'bottom-left', // Bottom-left status
-        sparks: true,               // Sparks on element finish
-        caret: true,                // Blinking caret typing
-        copyPaste: 0.35,            // Visual clone & customize cards
-        speed: 1.1
-      }).init();
-
-      window.cursorSwarm = swarmInstance;
-    }
-  } catch (err) {
-    console.warn('CursorSwarm initialization skipped or fallback active:', err);
-  }
-
-  // ========================================================
-  // 2. SWARM DOCK CONTROLS (Pause, Rebuild, Palette)
-  // ========================================================
-  const btnToggleSwarm = document.getElementById('btnToggleSwarm');
-  const btnRebuildSwarm = document.getElementById('btnRebuildSwarm');
-  const swarmPaletteSelect = document.getElementById('swarmPaletteSelect');
-  let isSwarmPaused = false;
-
-  if (btnToggleSwarm && swarmInstance) {
-    btnToggleSwarm.addEventListener('click', () => {
-      if (!isSwarmPaused) {
-        if (typeof swarmInstance.pause === 'function') swarmInstance.pause();
-        btnToggleSwarm.textContent = '▶ Resume';
-        isSwarmPaused = true;
-      } else {
-        if (typeof swarmInstance.resume === 'function') swarmInstance.resume();
-        btnToggleSwarm.textContent = '⏸ Pause';
-        isSwarmPaused = false;
-      }
-    });
-  }
-
-  if (btnRebuildSwarm && swarmInstance) {
-    btnRebuildSwarm.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setTimeout(() => {
-        try {
-          if (typeof swarmInstance.destroy === 'function') swarmInstance.destroy();
-          swarmInstance = new CursorSwarm({
-            cursors: 3,
-            agents: [
-              { name: 'POOVA', color: '#7f5af0', role: 'layout' },
-              { name: 'REACT_BOT', color: '#00f0ff', role: 'type' },
-              { name: 'AI_AGENT', color: '#10b981', role: 'media' }
-            ],
-            deconstruct: false,
-            hud: true,
-            hudPosition: 'bottom-left',
-            sparks: true,
-            caret: true,
-            speed: 1.2
-          }).init();
-          window.cursorSwarm = swarmInstance;
-        } catch (e) {
-          console.error(e);
-        }
-      }, 300);
-    });
-  }
-
-  if (swarmPaletteSelect && swarmInstance) {
-    swarmPaletteSelect.addEventListener('change', (e) => {
-      const pal = e.target.value;
-      if (typeof swarmInstance.setPalette === 'function') {
-        swarmInstance.setPalette(pal);
-      }
-    });
-  }
-
-  // ========================================================
-  // 3. ROLE TYPEWRITER EFFECT
-  // ========================================================
-  const roleElement = document.getElementById('roleTypewriter');
-  const roles = [
-    'Full Stack Developer',
-    'React.js & Node.js Specialist',
-    'AI Applications Builder',
-    'Full Stack Developer @ Flyggo',
-    'M.Sc. Computer Science Scholar'
+  /* ================= 1. KNOWLEDGE & DATASETS ================= */
+  const KNOWLEDGE_BASE = [
+    [
+      'Frontend',
+      'UI/UX & React Engineering',
+      'Clean, pixel-perfect, responsive interfaces built with React.js, Tailwind CSS, modern ES6+ JavaScript, and fluid CSS motion choreography.'
+    ],
+    [
+      'Backend',
+      'Backend & API Architecture',
+      'Scalable server backends engineered with Node.js, Express, PHP, and RESTful API endpoints for secure, high-throughput client communication.'
+    ],
+    [
+      'AI Apps',
+      'AI Integration & LLM APIs',
+      'Multilingual clinical triage and travel planners powered by Groq, Llama 3.3, Google Gemini API, voice recognition, and edge serverless execution.'
+    ],
+    [
+      'Databases',
+      'Relational & Real-Time Cloud',
+      'Schema design, indexing, and query optimization across MySQL, Firebase, Cloud Firestore real-time listener rooms, and Cloudinary media delivery.'
+    ],
+    [
+      'Developer',
+      'AI Tooling & Modern IDEs',
+      'Accelerating delivery velocity using Cursor, Codex, Google AI Studio, Lovable, GitHub workflows, and AI-assisted pair programming.'
+    ],
+    [
+      'Full-Stack',
+      'End-to-End Product Engineering',
+      'Translating user friction into production MVPs from local discovery platforms to real-time couple chess engines with sub-50ms sync.'
+    ]
   ];
 
-  let roleIdx = 0;
-  let charIdx = 0;
-  let isDeleting = false;
-  let typeSpeed = 75;
+  const PROJECTS_CATALOG = [
+    [
+      'PRJ_001',
+      'https://github.com/poova-dev/reliefmind-triage',
+      'ReliefMind Triage',
+      'AI-powered emergency triage application supporting voice & text in Tamil, English, and Hindi with sub-400ms clinical classification.',
+      ['Groq', 'Llama 3.3', 'React', 'Voice Input', 'Vercel']
+    ],
+    [
+      'PRJ_002',
+      '#contact',
+      'NammaMap',
+      'Tamil Nadu local discovery platform for neighborhood businesses, indigenous artisans, cultural gatherings, and hidden heritage gems.',
+      ['PHP 8', 'MySQL', 'Bootstrap', 'Dynamic CMS']
+    ],
+    [
+      'PRJ_003',
+      'https://github.com/poova-dev/king-queen',
+      'King & Queen ♟️',
+      'Couple-focused real-time chess platform with private matchmaking rooms, move logs, and sub-50ms piece sync via Cloud Firestore.',
+      ['HTML5', 'CSS3', 'JavaScript', 'Firestore']
+    ],
+    [
+      'PRJ_004',
+      '#contact',
+      'TripSketch 🗺️',
+      'Tamil Nadu-focused AI travel itinerary planner taking District + Days + Budget and generating optimal routes and food trails.',
+      ['React', 'AI Engine', 'TN Tourism', 'Tailwind']
+    ],
+    [
+      'PRJ_005',
+      'https://github.com/poova-dev/eduvoice-ai',
+      'EduVoice AI',
+      'Voice-interactive educational learning companion designed for hands-free conceptual reinforcement and multilingual tutoring.',
+      ['Python', 'WebSpeech', 'AI APIs', 'Node.js']
+    ],
+    [
+      'PRJ_006',
+      'https://github.com/poova-dev/ai-mystery-room',
+      'AI Mystery Room',
+      'Interactive room-escape puzzle game with dynamic generative AI storytelling and reactive scenario deduction.',
+      ['JavaScript', 'LLM Prompting', 'Tailwind']
+    ]
+  ];
 
-  function typeRole() {
-    if (!roleElement) return;
-    const current = roles[roleIdx];
+  const LIFE_MEDIA = [
+    [
+      'Outdoor Portrait',
+      'Field Identity',
+      'assets/photo-portrait-1.jpg'
+    ],
+    [
+      'Engineering Workspace',
+      'Development Rig',
+      'assets/photo-landscape.jpg'
+    ],
+    [
+      'Technology & Events',
+      'Community Meetup',
+      'assets/photo-portrait-2.jpg'
+    ]
+  ];
 
-    if (isDeleting) {
-      charIdx--;
-      roleElement.textContent = current.substring(0, charIdx);
-    } else {
-      charIdx++;
-      roleElement.textContent = current.substring(0, charIdx);
-    }
-
-    if (!isDeleting && charIdx === current.length) {
-      isDeleting = true;
-      typeSpeed = 1600; // Pause at end of text
-    } else if (isDeleting && charIdx === 0) {
-      isDeleting = false;
-      roleIdx = (roleIdx + 1) % roles.length;
-      typeSpeed = 300;
-    } else {
-      typeSpeed = isDeleting ? 40 : 80;
-    }
-
-    setTimeout(typeRole, typeSpeed);
+  // Render Knowledge Slides
+  const knSlides = $('#knSlides');
+  if (knSlides) {
+    knSlides.innerHTML = KNOWLEDGE_BASE.map(([tag, title, desc], i) => `
+      <article class="kn-slide">
+        <div class="kn-num">0${i + 1}</div>
+        <div class="mono" style="color: var(--acc);">(${tag})</div>
+        <h3>${title}</h3>
+        <p>${desc}</p>
+      </article>
+    `).join('');
   }
 
-  setTimeout(typeRole, 600);
-
-  // ========================================================
-  // 4. MOBILE NAVIGATION TOGGLE
-  // ========================================================
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const navLinks = document.getElementById('navLinks');
-
-  if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close mobile menu on click of any link
-    navLinks.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    });
+  // Render Project Cards
+  const pjTrack = $('#pjTrack');
+  if (pjTrack) {
+    pjTrack.innerHTML = PROJECTS_CATALOG.map(([code, href, title, desc, tags], i) => `
+      <a class="pj" href="${href}" target="_blank" rel="noopener">
+        <div class="id mono"><span>${code}</span><span>↗</span></div>
+        <h3>${title}</h3>
+        <p>${desc}</p>
+        <div class="tags">
+          ${tags.map(t => `<span>${t}</span>`).join('')}
+        </div>
+      </a>
+    `).join('');
   }
 
-  // ========================================================
-  // 5. INTERACTIVE TRIPSKETCH AI PLANNER SIMULATOR
-  // ========================================================
-  const btnPlanTrip = document.getElementById('btnPlanTrip');
-  const tripDistrict = document.getElementById('tripDistrict');
-  const tripDays = document.getElementById('tripDays');
-  const tripBudget = document.getElementById('tripBudget');
-  const tripResult = document.getElementById('tripResult');
+  // Render Life Gallery
+  const lifeGrid = $('#life-grid');
+  if (lifeGrid) {
+    lifeGrid.innerHTML = LIFE_MEDIA.map(([title, cat, imgUrl]) => `
+      <figure>
+        <img src="${imgUrl}" alt="${title}" loading="lazy" />
+        <figcaption>
+          <b>${title}</b>
+          <span>${cat}</span>
+        </figcaption>
+      </figure>
+    `).join('');
+  }
 
-  const tripDatabase = {
-    Thanjavur: {
-      d1: 'Brihadeeswarar Temple & Royal Palace Museum (Food: Thanjavur Degree Coffee & Ashoka Halwa)',
-      d2: 'Kumbakonam Mahamaham Tank & Darasuram Airavatesvara Temple (Stay: Heritage Homestay)',
-      d3: 'Chettinad Kanadukathan Mansions & Athangudi Tile Factory (Food: Chettinad Pepper Curry)',
-      d5: 'Thiruvaiyaru Thyagaraja Samadhi + Poondi Madha Basilica + Poompuhar Shoreline'
-    },
-    Madurai: {
-      d1: 'Meenakshi Amman Temple & Thirumalai Nayakar Mahal (Food: Murugan Idli & Jigarthanda)',
-      d2: 'Rameshwaram Coastal Corridor & Pamban Sea Bridge (Stay: Seaside Guesthouse)',
-      d3: 'Dhanushkodi Ghost Town & Vibhishana Temple (Food: Coastal Seafood & Filter Kaapi)',
-      d5: 'Kodaikanal Hill Station Extension (Silver Cascade, Pillar Rocks, Lake boating)'
-    },
-    Chennai: {
-      d1: 'San Thome Basilica & Kapaleeshwarar Mylapore (Food: Rayar’s Mess Ghee Podi Dosa)',
-      d2: 'Mahabalipuram Shore Temple & Pancha Rathas UNESCO (Stay: ECR Beach Resort)',
-      d3: 'Kanchipuram Silk Weavers Village & Ekambareswarar Temple (Food: Kanchi Idli)',
-      d5: 'Pulicat Lake Bird Sanctuary & Dutch Cemetery + Vedanthangal Sanctuary'
-    },
-    Nilgiris: {
-      d1: 'Ooty Botanical Gardens, Nilgiri Mountain Railway Toy Train (Food: Ooty Varkey & Tea)',
-      d2: 'Coonoor Sim’s Park, Dolphin’s Nose & Tea Factory Tour (Stay: Pine View Cottage)',
-      d3: 'Pykara Waterfalls, Needle Rock View Point Gudalur (Food: Homemade Chocolates)',
-      d5: 'Mudumalai Tiger Reserve Safari & Bandipur Forest Border Trail'
-    },
-    Kanyakumari: {
-      d1: 'Vivekananda Rock Memorial & Thiruvalluvar Statue (Sunrise & Sunset point)',
-      d2: 'Padmanabhapuram Wooden Palace & Mathur Aqueduct (Stay: Cape Breeze Hotel)',
-      d3: 'Tiruchendur Murugan Seashore Temple & Manapad Church (Food: Nanjil Fish Curry)',
-      d5: 'Suchindram Thanumalayan Temple + Courtallam Waterfalls Trail'
+  /* ================= 2. VAULT LOADER SEQUENCE ================= */
+  const loader = $('#loader');
+  const ldNum = $('.ld-n', loader);
+  let count = 0;
+
+  document.documentElement.classList.add('locked');
+
+  const countTimer = setInterval(() => {
+    count += Math.floor(Math.random() * 8) + 3;
+    if (count > 100) count = 100;
+    if (ldNum) ldNum.textContent = String(count).padStart(3, '0');
+
+    if (count === 100) {
+      clearInterval(countTimer);
+      setTimeout(() => {
+        if (loader) {
+          loader.classList.add('opened');
+          document.documentElement.classList.remove('locked');
+          setTimeout(() => {
+            loader.remove();
+          }, 800);
+        }
+        initAgentsSwarm();
+      }, 300);
     }
-  };
+  }, 30);
 
-  if (btnPlanTrip && tripResult) {
-    btnPlanTrip.addEventListener('click', () => {
-      const dist = tripDistrict.value;
-      const days = parseInt(tripDays.value, 10);
-      const budget = tripBudget.value || '₹8,500';
-      const data = tripDatabase[dist] || tripDatabase.Thanjavur;
+  /* ================= 3. SCROLL PROGRESS & HUD TRACKER ================= */
+  const progressBar = $('#progressBar');
+  const pctDisplay = $('#pct');
+  const statusDisplay = $('#status');
 
-      tripResult.innerHTML = `
-        <div style="color:#34d399; font-weight:700; margin-bottom:6px;">✨ AI Plan for ${dist} (${days} Days · Est. Budget ${budget})</div>
-        <strong>Day 1:</strong> ${data.d1}<br/>
-        <strong>Day 2:</strong> ${data.d2}<br/>
-        ${days >= 3 ? `<strong>Day 3:</strong> ${data.d3}<br/>` : ''}
-        ${days >= 5 ? `<strong>Day 4-5:</strong> ${data.d5}<br/>` : ''}
-        <div style="font-size:0.75rem; color:#94a3b8; margin-top:6px;">⚡ Clustered adjacent transport routes calculated with 0% budget leak.</div>
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = totalHeight > 0 ? (window.scrollY / totalHeight) : 0;
+    const pct = Math.min(100, Math.max(0, Math.round(progress * 100)));
+
+    if (progressBar) progressBar.style.transform = `scaleX(${progress})`;
+    if (pctDisplay) pctDisplay.textContent = `${pct}%`;
+
+    if (statusDisplay) {
+      if (pct < 15) statusDisplay.textContent = 'HERO // ORIGIN';
+      else if (pct < 32) statusDisplay.textContent = 'ANALYZING PROFILE';
+      else if (pct < 50) statusDisplay.textContent = 'PARSING KNOWLEDGE BASE';
+      else if (pct < 70) statusDisplay.textContent = 'COMPILING FEATURED PROJECTS';
+      else if (pct < 88) statusDisplay.textContent = 'VERIFYING CAREER & WORKS';
+      else statusDisplay.textContent = 'READY // TERMINAL CONNECT';
+    }
+  }, { passive: true });
+
+  /* ================= 4. AUTONOMOUS CURSOR AGENTS ENGINE ================= */
+  function initAgentsSwarm() {
+    const container = $('#agents');
+    if (!container) return;
+
+    const AGENTS_SPECS = [
+      { name: 'POOVA', color: '#a855f7' },
+      { name: 'REACT_BOT', color: '#c084fc' },
+      { name: 'AI_AGENT', color: '#ffffff' }
+    ];
+
+    const agents = AGENTS_SPECS.map(spec => {
+      const el = document.createElement('div');
+      el.className = 'cur';
+      el.style.setProperty('--c', spec.color);
+      el.innerHTML = `
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="${spec.color}">
+          <path d="M0 0l7 21 3.5-7.5L18 10 0 0z" />
+        </svg>
+        <span>${spec.name}</span>
       `;
+      container.appendChild(el);
+
+      return {
+        el,
+        x: Math.random() * (window.innerWidth - 100) + 50,
+        y: Math.random() * (window.innerHeight - 100) + 50,
+        targetX: Math.random() * (window.innerWidth - 100) + 50,
+        targetY: Math.random() * (window.innerHeight - 100) + 50,
+        speed: 0.035 + Math.random() * 0.03
+      };
     });
-  }
 
-  // ========================================================
-  // 6. INTERACTIVE RELIEFMIND TRIAGE SIMULATOR
-  // ========================================================
-  const btnTestTriage = document.getElementById('btnTestTriage');
-  const triageInput = document.getElementById('triageInput');
-  const triageOutput = document.getElementById('triageOutput');
+    // Marquee selection simulator
+    const marquee = document.createElement('div');
+    marquee.className = 'mq';
+    marquee.innerHTML = '<i></i><i></i><i></i><i></i>';
+    marquee.style.setProperty('--c', '#a855f7');
+    container.appendChild(marquee);
 
-  if (btnTestTriage && triageInput && triageOutput) {
-    btnTestTriage.addEventListener('click', () => {
-      const text = triageInput.value.toLowerCase().trim();
+    let marqueeActive = false;
+    let nextMarqueeTime = Date.now() + 2000;
 
-      if (!text) {
-        triageOutput.innerHTML = `<span style="color:#ef4444;">Please enter a symptom description.</span>`;
-        return;
-      }
-
-      // Simple keyword triage heuristic
-      const criticalKeywords = ['நெஞ்சு', 'வலி', 'மூச்சு', 'chest', 'heart', 'breath', 'unconscious', 'cardiac', 'stroke', 'bleeding'];
-      const urgentKeywords = ['fever', 'காய்ச்சல்', 'fracture', 'bone', 'pain', 'vomit', 'burn', 'deep cut'];
-
-      let isCritical = criticalKeywords.some((k) => text.includes(k));
-      let isUrgent = urgentKeywords.some((k) => text.includes(k));
-
-      if (isCritical) {
-        triageOutput.innerHTML = `
-          <span class="triage-output-badge triage-crit">LEVEL 1: CRITICAL</span>
-          <span style="margin-left: 8px;">Cardiac/Respiratory risk identified. 108 Emergency Ambulance routed. Nearest ER notified.</span>
-        `;
-      } else if (isUrgent) {
-        triageOutput.innerHTML = `
-          <span class="triage-output-badge triage-urg">LEVEL 2: URGENT</span>
-          <span style="margin-left: 8px;">Acute condition flagged. Priority physician review queued within 15 minutes.</span>
-        `;
-      } else {
-        triageOutput.innerHTML = `
-          <span class="triage-output-badge triage-stab">LEVEL 3: STABLE</span>
-          <span style="margin-left: 8px;">Vitals non-critical. Standard outpatient or tele-consultation triage recommended.</span>
-        `;
-      }
-    });
-  }
-
-  // ========================================================
-  // 7. CONTACT FORM HANDLER
-  // ========================================================
-  const contactForm = document.getElementById('contactForm');
-  const formFeedback = document.getElementById('formFeedback');
-
-  if (contactForm && formFeedback) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('senderName').value;
-      const email = document.getElementById('senderEmail').value;
-      const msg = document.getElementById('senderMsg').value;
-
-      formFeedback.style.display = 'block';
-
-      // Open email client
-      const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-      const body = encodeURIComponent(`Hi Poovaragavan,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
-      window.location.href = `mailto:poovaragavan.dev@gmail.com?subject=${subject}&body=${body}`;
+    function triggerMarqueeAt(x, y) {
+      marquee.style.left = `${x - 60}px`;
+      marquee.style.top = `${y - 40}px`;
+      marquee.style.width = '120px';
+      marquee.style.height = '80px';
+      marquee.style.opacity = '1';
+      marqueeActive = true;
 
       setTimeout(() => {
-        contactForm.reset();
-      }, 1500);
-    });
-  }
-});
+        marquee.style.opacity = '0';
+        marqueeActive = false;
+        nextMarqueeTime = Date.now() + 4000 + Math.random() * 4000;
+      }, 1200);
+    }
 
+    function swarmLoop() {
+      agents.forEach(a => {
+        a.x += (a.targetX - a.x) * a.speed;
+        a.y += (a.targetY - a.y) * a.speed;
+        a.el.style.transform = `translate(${a.x}px, ${a.y}px)`;
+
+        if (Math.hypot(a.targetX - a.x, a.targetY - a.y) < 30) {
+          a.targetX = Math.random() * (window.innerWidth - 120) + 60;
+          a.targetY = Math.random() * (window.innerHeight - 120) + 60;
+
+          if (!marqueeActive && Date.now() > nextMarqueeTime) {
+            triggerMarqueeAt(a.targetX, a.targetY);
+          }
+        }
+      });
+
+      requestAnimationFrame(swarmLoop);
+    }
+
+    requestAnimationFrame(swarmLoop);
+  }
+})();
