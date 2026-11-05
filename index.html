@@ -1,302 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poovaragavan A — Systems Architect & Full-Stack Engineer</title>
-  <meta name="description" content="Portfolio of Poovaragavan A. Full-Stack Developer & AI Application Builder with an autonomous collaborative cursor architecture in White, Black, and Electric Purple.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poovaragavan A — Full Stack Developer. React.js, Node.js, PHP, MySQL, Firebase, AI Applications & Web Architecture.">
+    <meta name="theme-color" content="#07050d">
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="Poovaragavan Portfolio" name="apple-mobile-web-app-title" />
+    <link rel="icon" href="assets/favicon.svg">
+    <title>Poovaragavan A — Full Stack Developer</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-  <!-- Google Fonts: Anton (Display), Inter Tight (Body), JetBrains Mono (Code/HUD) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/poova-avatar.jpg">
+    <link rel="prefetch" as="image" href="assets/photo-landscape.jpg">
+    <link rel="prefetch" as="image" href="assets/photo-portrait-1.jpg">
+    <link rel="prefetch" as="image" href="assets/photo-portrait-2.jpg">
+    <link rel="prefetch" as="image" href="assets/reliefmind-mockup.svg">
+    <link rel="prefetch" as="image" href="assets/nammamap-mockup.svg">
+    <link rel="prefetch" as="image" href="assets/kingqueen-mockup.svg">
+    <link rel="prefetch" as="image" href="assets/tripsketch-mockup.svg">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Vault Door Sliding Loader -->
-  <div id="loader" aria-hidden="true">
-    <i class="lh l"></i>
-    <i class="lh r"></i>
-    <span class="ld-n mono">000</span>
-  </div>
-
-  <!-- Ambient Backdrop Layers -->
-  <div class="grid-bg"></div>
-  <div class="grain"></div>
-  <div class="vignette"></div>
-  <div class="progress" id="progressBar"></div>
-
-  <!-- Fixed Top HUD Navigation Bar -->
-  <header class="hud">
-    <a href="#home" class="logo">POOVA<span>/</span>BUILD</a>
-    <div class="status">
-      <i></i>
-      <span id="status">STANDBY</span>
+<body class="js">
+    <!-- ===== LOADER ===== -->
+    <div id="loader">
+        <div class="lh l"></div>
+        <div class="lh r"></div>
+        <div class="ld-n mono">000</div>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#knowledge">Knowledge</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#life">Life</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <span class="pct" id="pct">0%</span>
-    <a href="https://github.com/Poovaragavan2004" target="_blank" rel="noopener" class="paper">GitHub ↗</a>
-  </header>
 
-  <!-- Autonomous Cursor Agents Overlay -->
-  <div id="agents" aria-hidden="true"></div>
+    <!-- ===== ATMOSPHERE ===== -->
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div class="grid-bg"></div>
 
-  <main>
-    <!-- ===== SCENE 01 - HERO ===== -->
-    <section id="home">
-      <div class="hero">
-        <figure class="hero-photo" id="heroPhoto" data-b="img" data-l="Portrait">
-          <div class="ph">
-            <img src="assets/poova-avatar.jpg" alt="Poovaragavan A - Full Stack Developer" />
-          </div>
-        </figure>
-        <p class="hero-tag mono" data-b="type" data-l="Tagline">[ Full-Stack Developer / AI Applications Builder ]</p>
-        <h1 class="hero-name" id="heroName" aria-label="Poovaragavan A">
-          <span class="ln">POOVA</span>
-          <span class="ln">RAGA</span>
-          <span class="ln">VAN</span>
-        </h1>
-        <div class="hero-bottom">
-          <p class="desc" data-b="words" data-l="Intro">
-            Full Stack Developer building modern, scalable and user-focused web applications with JavaScript, React, Node.js and AI-powered tools. Currently engineering at <strong>Flyggo</strong> while pursuing M.Sc. in Computer Science.
-          </p>
-          <div class="ctas" data-b="pop" data-l="Actions">
-            <a href="#projects" class="btn solid">Explore Projects →</a>
-            <a href="https://github.com/Poovaragavan2004" target="_blank" rel="noopener" class="btn">GitHub</a>
-            <a href="https://www.linkedin.com/in/poova-ragavan/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
-            <a href="#contact" class="btn">Contact</a>
-          </div>
-        </div>
-        <span class="hero-side l mono">Scene 01 — Origin</span>
-        <span class="hero-side r mono">Tamil Nadu, IN · 10.78°N 79.13°E</span>
-      </div>
-    </section>
+    <!-- ===== PROGRESS & HUD ===== -->
+    <div class="progress"></div>
+    <header class="hud">
+        <div class="logo">POOVARAGAVAN A</div>
+        <div class="status"><i></i><span id="status">System initialising...</span></div>
+        <nav>
+            <a href="#home">Origin</a>
+            <a href="#about">About</a>
+            <a href="#knowledge">Skills</a>
+            <a href="#projects">Work</a>
+            <a href="#experience">Track</a>
+            <a href="#life">Life</a>
+            <a href="#deep">Deep</a>
+            <a href="#contact">Connect</a>
+        </nav>
+        <div class="pct mono"><span id="pct">00%</span></div>
+        <a class="paper mono" href="https://poovaragavan.ccbp.tech/" target="_blank" rel="noopener">Classic ↗</a>
+    </header>
 
-    <!-- ===== SCENE 02 - ABOUT ===== -->
-    <section id="about" class="scene">
-      <div class="ghost" aria-hidden="true">POOVA</div>
-      <div class="wrap">
-        <div class="s-head">
-          <span class="mono" data-b="type" data-l="Scene"><b>Scene 02</b> — Profile</span>
-          <h2 class="s-title" data-b="type" data-l="Heading">Who am I <span class="sl">/</span></h2>
-        </div>
-        <div class="about cols2">
-          <div class="col" data-b="words" data-l="Bio 1">
-            <p>
-              I am <strong>Poovaragavan A</strong>, a Full Stack Developer focused on building modern web applications, AI-powered products, and practical digital solutions.
-            </p>
-            <p style="margin-top: 16px;">
-              I work across both frontend and backend development, with solid experience in <strong>HTML5, CSS3, JavaScript, React.js, Node.js, PHP, MySQL, Firebase</strong>, and robust <strong>API integration</strong>.
-            </p>
-          </div>
-          <div class="col" data-b="words" data-l="Bio 2">
-            <p>
-              I am also deeply driven by <strong>AI application development, developer tooling, product building, UI/UX</strong>, and Android ecosystems. Currently building commercial web applications at <strong>Flyggo</strong>.
-            </p>
-            <div class="chips" data-b="pop" data-l="Specializations">
-              <span>Full Stack Web Dev</span>
-              <span>React.js Specialist</span>
-              <span>Backend &amp; APIs</span>
-              <span>AI Web Apps</span>
-              <span>Firebase Realtime</span>
-              <span>Developer Tools</span>
+    <!-- ===== AGENT SWARM OVERLAY ===== -->
+    <div id="agents"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main">
+        <!-- ===== SCENE 01 - HERO ===== -->
+        <section id="home">
+            <div class="hero">
+                <figure class="hero-photo" id="heroPhoto">
+                    <div class="ph"><img src="assets/poova-avatar.jpg" alt="Poovaragavan A"></div>
+                </figure>
+                <p class="hero-tag mono" data-b="type" data-l="Tagline" data-manual>[ Full Stack Developer / AI &amp; Web Architect ]</p>
+                <h1 class="hero-name" id="heroName" aria-label="Poovaragavan A">
+                    <span class="ln">Poova</span><span class="ln">ragavan</span><span class="ln">A</span>
+                </h1>
+                <div class="hero-bottom">
+                    <p class="desc" data-b="words" data-l="Intro" data-manual>Full Stack Developer building modern, scalable and user-focused web applications with React, Node.js and AI-powered systems. Based in Tamil Nadu, India.</p>
+                    <div class="ctas" data-b="pop" data-l="Actions" data-manual>
+                        <a href="#contact" class="btn solid">Get in touch →</a>
+                        <a href="https://www.linkedin.com/in/poova-ragavan/" class="btn" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/poova-dev" class="btn" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://poovaragavan.ccbp.tech/" class="btn" target="_blank" rel="noopener">Portfolio ↗</a>
+                    </div>
+                </div>
+                <span class="hero-side l mono">Scene 01 — Genesis</span>
+                <span class="hero-side r mono">Tamil Nadu, IN - 10.78°N 79.13°E</span>
+                <div class="hero-fade"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ===== SCENE 03 - KNOWLEDGE ===== -->
-    <section id="knowledge" class="scene">
-      <div class="wrap">
-        <div class="s-head">
-          <span class="mono" data-b="type" data-l="Scene"><b>Scene 03</b> — Domains</span>
-          <h2 class="s-title" data-b="type" data-l="Heading">Knowledge Base <span class="sl">/</span></h2>
-        </div>
-        <div class="kn-track-wrapper">
-          <div class="kn-slides" id="knSlides">
-            <!-- Dynamically populated via script -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SCENE 04 - PROJECTS ===== -->
-    <section id="projects" class="scene">
-      <div class="wrap">
-        <div class="s-head">
-          <span class="mono" data-b="type" data-l="Scene"><b>Scene 04</b> — Works</span>
-          <h2 class="s-title" data-b="type" data-l="Heading">Featured Projects <span class="sl">/</span></h2>
-        </div>
-        <div class="pj-grid" id="pjTrack">
-          <!-- Dynamically populated via script -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SCENE 05 - PHILOSOPHY ===== -->
-    <section id="philosophy" class="scene">
-      <div class="wrap">
-        <blockquote class="quote" data-b="words" data-l="Quote">
-          “DON'T JUST WRITE LINES OF CODE. ARCHITECT PRACTICAL SYSTEMS THAT DELIVER MEASURABLE HUMAN IMPACT.”
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- ===== SCENE 06 - EXPERIENCE ===== -->
-    <section id="experience" class="scene">
-      <div class="wrap">
-        <div class="s-head">
-          <span class="mono" data-b="type" data-l="Scene"><b>Scene 06</b> — Timeline</span>
-          <h2 class="s-title" data-b="type" data-l="Heading">Career &amp; Education <span class="sl">/</span></h2>
-        </div>
-        <div class="exp-list">
-          <article class="job" data-b="frame" data-l="Job 1">
-            <div class="job-meta mono">JULY 2026 — PRESENT · FULL-TIME</div>
-            <h3 class="r">Full Stack Developer</h3>
-            <p class="company">Flyggo</p>
-            <p class="d">
-              Commercial web application development, responsive UI engineering, backend integration, API orchestration, continuous deployment, and performance improvements using React.js, Node.js, and modern REST APIs.
-            </p>
-          </article>
-          <article class="job" data-b="frame" data-l="Edu 1">
-            <div class="job-meta mono">2025 — PRESENT · HIGHER EDUCATION</div>
-            <h3 class="r">M.Sc. in Computer Science (1st Year)</h3>
-            <p class="company">Advanced Computing Specialization</p>
-            <p class="d">
-              Deep dive into distributed systems, advanced algorithms, cloud software engineering, and modern artificial intelligence architectures.
-            </p>
-          </article>
-          <article class="job" data-b="frame" data-l="Edu 2">
-            <div class="job-meta mono">2022 — 2025 · GRADUATED (CGPA: 7.8)</div>
-            <h3 class="r">B.Sc. in Computer Science</h3>
-            <p class="company">Bharathidasan University</p>
-            <p class="d">
-              Foundational computer science curriculum covering data structures, relational database management (RDBMS), object-oriented programming, operating systems, and web technologies.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SCENE 07 - LIFE & HARDWARE ===== -->
-    <section id="life" class="scene">
-      <div class="wrap">
-        <div class="s-head">
-          <span class="mono" data-b="type" data-l="Scene"><b>Scene 07</b> — Field Works</span>
-          <h2 class="s-title" data-b="type" data-l="Heading">Life &amp; Moments <span class="sl">/</span></h2>
-        </div>
-        <div class="life" id="life-grid">
-          <!-- Masonry populated via script -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SCENE 08 - DEEP DIVE (3D STACKED BOOKS) ===== -->
-    <section id="deep" class="scene">
-      <div class="wrap">
-        <div class="s-head">
-          <span class="mono" data-b="type" data-l="Scene"><b>Scene 08</b> — Architecture Deep Dive</span>
-          <h2 class="s-title" data-b="type" data-l="Heading">Deep Dive <span class="sl">/</span></h2>
-        </div>
-        <div class="books">
-          <div class="book" data-b="frame" data-l="Book 1">
-            <div class="stack">
-              <div class="p3 stack-card"></div>
-              <div class="p2 stack-card"></div>
-              <div class="p1 stack-card"></div>
-              <div class="cv stack-card stack-front">
-                <span class="book-tag mono">VOL 01</span>
-                <h4>ReliefMind AI Triage Core</h4>
-              </div>
+        <!-- ===== SCENE 02 - ABOUT ===== -->
+        <section id="about" class="scene">
+            <div class="ghost" aria-hidden="true">POOVA</div>
+            <div class="wrap">
+                <div class="s-head">
+                    <span class="mono" data-b="type" data-l="Scene"><b>Scene 02</b> — About</span>
+                    <h2 class="s-title" data-b="type" data-l="Heading">Who am I <span class="sl">/</span></h2>
+                </div>
+                <div class="about">
+                    <div>
+                        <figure class="media" data-b="img" data-l="Photo">
+                            <img src="assets/photo-landscape.jpg" alt="Poovaragavan in Tamil Nadu" loading="lazy">
+                        </figure>
+                        <div class="cap mono"><span>Fig. 01</span><span>Full Stack &amp; AI Developer</span></div>
+                    </div>
+                    <div class="bio">
+                        <p data-b="words" data-l="Bio"><span class="k">(profile)</span>Poovaragavan is a Full Stack Developer focused on building modern web applications, AI-powered products, and practical digital solutions.</p>
+                        <p data-b="words" data-l="Bio"><span class="k">(engineering)</span>Works across frontend and backend development with React.js, Node.js, PHP, MySQL, Firebase, and AI APIs. Currently developing high-impact products at Flyggo while pursuing an M.Sc. in Computer Science.</p>
+                    </div>
+                </div>
+                <div class="cols2">
+                    <div>
+                        <h3 class="h3m mono" data-b="type" data-l="Label">/ Languages</h3>
+                        <div class="row" data-b="frame" data-l="Tamil"><span>Tamil</span><span class="mono"><b>01</b>Native</span></div>
+                        <div class="row" data-b="frame" data-l="English"><span>English</span><span class="mono"><b>02</b>Professional</span></div>
+                        <div class="row" data-b="frame" data-l="Hindi"><span>Hindi</span><span class="mono"><b>03</b>Conversational</span></div>
+                        <div class="row" data-b="frame" data-l="JavaScript"><span>JavaScript / TS</span><span class="mono"><b>04</b>Fluent</span></div>
+                        <div class="row" data-b="frame" data-l="Python"><span>Python &amp; C++</span><span class="mono"><b>05</b>Core</span></div>
+                    </div>
+                    <div>
+                        <h3 class="h3m mono" data-b="type" data-l="Label">/ Education</h3>
+                        <div class="uni" data-b="frame" data-l="Master">
+                            <img src="assets/msc-logo.svg" alt="M.Sc." loading="lazy">
+                            <div><span class="mono">(master) - 1st Year</span><div class="t">M.Sc. Computer Science</div><div class="s">Currently Pursuing — Advanced Computing</div></div>
+                        </div>
+                        <div class="uni" data-b="frame" data-l="Bachelor">
+                            <img src="assets/bdu-logo.svg" alt="BDU" loading="lazy">
+                            <div><span class="mono">(degree) - BDU</span><div class="t">Bharathidasan University</div><div class="s">B.Sc. Computer Science (2022–2025) · CGPA: 7.8</div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <div class="mono">SYSTEM ARCHITECTURE · GROQ &amp; LLAMA 3.3</div>
-              <h3>Emergency Medical Triage Specification</h3>
-              <p>Engineering sub-400ms multilingual voice transcription pipelines with emergency level classification protocols in Tamil, English, and Hindi.</p>
-              <a href="https://github.com/poova-dev/reliefmind-triage" target="_blank" rel="noopener" class="btn solid" style="margin-top: 20px;">Inspect Architecture Repo ↗</a>
+        </section>
+
+        <!-- ===== MARQUEE TICKER ===== -->
+        <div class="ticker" aria-hidden="true"><div class="trk" id="trk1"></div><div class="trk" id="trk2"></div></div>
+
+        <!-- ===== SCENE 03 - KNOWLEDGE ===== -->
+        <section id="knowledge">
+            <div class="kn-stage">
+                <div class="kn-head wrap">
+                    <div class="s-head">
+                        <span class="mono" data-b="type" data-l="Scene"><b>Scene 03</b> — Skills</span>
+                        <h2 class="s-title" data-b="type" data-l="Heading">Knowledge <span class="sl">/</span></h2>
+                    </div>
+                </div>
+                <div id="knSlides"></div>
+                <div class="kn-count"><span id="knNow">01</span><small> / 07</small></div>
+                <div class="kn-bar"><i></i></div>
             </div>
-          </div>
+        </section>
 
-          <div class="book" data-b="frame" data-l="Book 2" style="margin-top: 24px;">
-            <div class="stack">
-              <div class="p3 stack-card"></div>
-              <div class="p2 stack-card"></div>
-              <div class="p1 stack-card"></div>
-              <div class="cv stack-card stack-front">
-                <span class="book-tag mono">VOL 02</span>
-                <h4>TripSketch TN Engine</h4>
-              </div>
+        <!-- ===== SCENE 04 - PROJECTS ===== -->
+        <section id="projects">
+            <div class="pj-stage">
+                <div class="wrap">
+                    <div class="s-head">
+                        <span class="mono" data-b="type" data-l="Scene"><b>Scene 04</b> — Selected works - more on GitHub</span>
+                        <h2 class="s-title" data-b="type" data-l="Heading">Self-projects <span class="sl">/</span></h2>
+                    </div>
+                </div>
+                <div class="pj-track" id="pjTrack"></div>
+                <div class="pj-progress"><i></i></div>
             </div>
-            <div>
-              <div class="mono">ALGORITHM REPORT · TAMIL NADU TOURISM</div>
-              <h3>Budget-Aware District Hop Optimization</h3>
-              <p>Designing dynamic heuristic algorithms to cluster adjacent districts, authentic food trails, and heritage coordinates with zero budget overruns.</p>
-              <a href="#contact" class="btn solid" style="margin-top: 20px;">Request Technical Whitepaper →</a>
+        </section>
+
+        <!-- ===== SCENE 05 - PHILOSOPHY (pinned) ===== -->
+        <section id="philosophy">
+            <div class="ghost light" aria-hidden="true">BUILD</div>
+            <div class="wrap">
+                <div class="s-head" style="margin-bottom:28px">
+                    <span class="mono" data-b="type" data-l="Scene"><b>Scene 05</b> — Vision &amp; Craft</span>
+                </div>
+                <h2 class="quote" id="quote">Build with intention, <span class="q2">ship with purpose,</span> iterate with curiosity.</h2>
+                <p class="phil-p" data-b="words" data-l="Manifesto" data-manual>Every web interface, API endpoint and AI model integration is a tool to empower humans. I believe in clarity over complexity, and building practical solutions that scale cleanly.</p>
+                <div class="now">
+                    <div class="mono">Currently focused</div>
+                    <div class="chips hot" data-b="pop" data-l="Now" data-manual>
+                        <span>React 19</span><span>Llama 3.3</span><span>Groq Fast Inference</span><span>Node.js APIs</span><span>Firestore Architecture</span><span>Tailwind CSS</span><span>Figma UI/UX</span><span>Full Stack Dev</span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ===== SCENE 09 - CONTACT & CREDITS ===== -->
-    <section id="contact" class="scene">
-      <div class="wrap">
-        <div class="s-head">
-          <span class="mono" data-b="type" data-l="Scene"><b>Scene 09</b> — Terminal</span>
-          <h2 class="s-title" data-b="type" data-l="Heading">Let's Connect <span class="sl">/</span></h2>
-        </div>
-        <a href="mailto:poovaragavan.dev@gmail.com" class="big-mail" data-b="type" data-l="Email">
-          POOVARAGAVAN.DEV@GMAIL.COM
-        </a>
-        <div class="links">
-          <a href="https://github.com/Poovaragavan2004" target="_blank" rel="noopener" class="lnk" data-b="frame" data-l="GitHub">
-            <span>GitHub Profile</span>
-            <span class="mono">@Poovaragavan2004 ↗</span>
-          </a>
-          <a href="https://www.linkedin.com/in/poova-ragavan/" target="_blank" rel="noopener" class="lnk" data-b="frame" data-l="LinkedIn">
-            <span>LinkedIn Network</span>
-            <span class="mono">poova-ragavan ↗</span>
-          </a>
-          <a href="https://github.com/poova-dev" target="_blank" rel="noopener" class="lnk" data-b="frame" data-l="GitHub Org">
-            <span>poova-dev Organization</span>
-            <span class="mono">REPOSITORIES ↗</span>
-          </a>
-          <a href="https://poovaragavan.ccbp.tech/" target="_blank" rel="noopener" class="lnk" data-b="frame" data-l="Live Site">
-            <span>Existing Portfolio</span>
-            <span class="mono">poovaragavan.ccbp.tech ↗</span>
-          </a>
-        </div>
-      </div>
+        <!-- ===== SCENE 06 - EXPERIENCE ===== -->
+        <section id="experience" class="scene">
+            <div class="ghost" aria-hidden="true">TRACK</div>
+            <div class="wrap">
+                <div class="s-head">
+                    <span class="mono" data-b="type" data-l="Scene"><b>Scene 06</b> — Track record</span>
+                    <h2 class="s-title" data-b="type" data-l="Heading">Experience <span class="sl">/</span></h2>
+                </div>
+                <div class="exp">
+                    <div>
+                        <h3 class="h3m mono" data-b="type" data-l="Label">/ Career</h3>
+                        <div class="job" data-b="frame" data-l="Flyggo">
+                            <div><div class="r">Full Stack Developer</div><div class="o">Flyggo · July 2026 – Present</div></div>
+                            <span class="mono">Company</span>
+                        </div>
+                        <div class="job" data-b="frame" data-l="AI-Products">
+                            <div><div class="r">Product &amp; AI Engineer</div><div class="o">ReliefMind &amp; NammaMap Systems</div></div>
+                            <span class="mono self">Self</span>
+                        </div>
+                        <div class="job" data-b="frame" data-l="MSc-Degree">
+                            <div><div class="r">M.Sc. Computer Science</div><div class="o">Postgraduate Scholar · 1st Year</div></div>
+                            <span class="mono self">Academia</span>
+                        </div>
+                        <div class="job" data-b="frame" data-l="BSc-Degree">
+                            <div><div class="r">B.Sc. Computer Science</div><div class="o">Bharathidasan University · CGPA: 7.8</div></div>
+                            <span class="mono self">Degree</span>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div>
+                            <h3 class="h3m mono" data-b="type" data-l="Label">/ Core Competencies</h3>
+                            <div class="chips" data-b="pop" data-l="Skills">
+                                <span>Full Stack Web</span><span>React.js Ecosystem</span><span>REST APIs &amp; Auth</span><span>Database Design</span><span>AI API Integration</span><span>Responsive Systems</span><span>UI/UX Execution</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="h3m mono" data-b="type" data-l="Label">/ Technical Strengths</h3>
+                            <div class="chips hot" data-b="pop" data-l="Certs">
+                                <span>M.Sc. Computer Science</span><span>B.Sc. CS — CGPA 7.8</span><span>Groq &amp; Llama Integrator</span><span>Firebase Certified Patterns</span><span>Modern Tailwind &amp; CSS3</span><span>Git &amp; Vercel CI/CD</span><span>AI-assisted Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="credits">
-        <div class="the-end">
-          <span class="ln">THE</span>
-          <span class="ln o"><span class="hc">END</span></span>
-        </div>
-        <dl>
-          <dt>DESIGN &amp; ARCHITECTURE</dt>
-          <dd>Poovaragavan A · White, Black &amp; Electric Purple Engine</dd>
-        </dl>
-        <div class="mono" style="margin-top: 20px; color: var(--dim);">
-          TAMIL NADU, INDIA · © 2026 ALL RIGHTS RESERVED
-        </div>
-      </div>
-    </section>
-  </main>
+        <!-- ===== SCENE 07 - LIFE ===== -->
+        <section id="life" class="scene">
+            <div class="ghost" aria-hidden="true">LIFE</div>
+            <div class="wrap">
+                <div class="s-head">
+                    <span class="mono" data-b="type" data-l="Scene"><b>Scene 07</b> — Code, AI, creativity &amp; visual snapshots</span>
+                    <h2 class="s-title" data-b="type" data-l="Heading">My gallery <span class="sl">/</span></h2>
+                </div>
+                <div class="life" id="life-grid"></div>
+            </div>
+        </section>
 
-  <!-- Runtime Engine Script -->
-  <script src="script.js"></script>
+        <!-- ===== SCENE 08 - DEEP DIVE ===== -->
+        <section id="deep" class="scene">
+            <div class="ghost" aria-hidden="true">DOCS</div>
+            <div class="wrap">
+                <div class="s-head">
+                    <span class="mono" data-b="type" data-l="Scene"><b>Scene 08</b> — Technical reports &amp; architecture</span>
+                    <h2 class="s-title" data-b="type" data-l="Heading">Deep dive <span class="sl">/</span></h2>
+                </div>
+                <div class="books">
+                    <article class="book" data-b="frame" data-l="ReliefMind Report">
+                        <div class="stack">
+                            <img class="p3" src="assets/book-reliefmind-p3.svg" alt="" loading="lazy">
+                            <img class="p2" src="assets/book-reliefmind-p2.svg" alt="" loading="lazy">
+                            <img class="p1" src="assets/book-reliefmind-p1.svg" alt="" loading="lazy">
+                            <img class="cv" src="assets/book-reliefmind-cv.svg" alt="ReliefMind Triage Architecture" loading="lazy">
+                        </div>
+                        <div>
+                            <div class="mono"><span>ReliefMind AI</span><span>System Spec v1.0</span></div>
+                            <h3>Multilingual Emergency Triage System</h3>
+                            <p>Architecture breakdown of low-latency voice and text triage utilizing Groq-accelerated Llama 3.3 70B. Features multilingual support (Tamil, English, Hindi), emergency sentiment classification, and rapid symptom intake.</p>
+                            <div class="tags"><span>Groq API</span><span>Llama 3.3</span><span>Voice AI</span><span>React</span></div>
+                            <a href="https://github.com/poova-dev/reliefmind-triage" class="btn" target="_blank" rel="noopener">View Repository ↗</a>
+                        </div>
+                    </article>
+                    <article class="book" data-b="frame" data-l="Systems Architecture">
+                        <div class="stack">
+                            <img class="p3" src="assets/book-systems-p3.svg" alt="" loading="lazy">
+                            <img class="p2" src="assets/book-systems-p2.svg" alt="" loading="lazy">
+                            <img class="p1" src="assets/book-systems-p1.svg" alt="" loading="lazy">
+                            <img class="cv" src="assets/book-systems-cv.svg" alt="Local Discovery Systems Report" loading="lazy">
+                        </div>
+                        <div>
+                            <div class="mono"><span>NammaMap &amp; TripSketch</span><span>Architecture Report</span></div>
+                            <h3>Hyperlocal Discovery &amp; Route Planning Engine</h3>
+                            <p>Comparative analysis of relational indexing in MySQL versus real-time document listeners in Firebase Firestore for location-aware discovery and multi-day itinerary generation across Tamil Nadu.</p>
+                            <div class="tags"><span>System Architecture</span><span>MySQL</span><span>Firebase</span><span>APIs</span></div>
+                            <a href="https://github.com/poova-dev/tripsketch" class="btn" target="_blank" rel="noopener">View Repository ↗</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SCENE 09 - CONTACT ===== -->
+        <section id="contact" class="scene">
+            <div class="ghost" aria-hidden="true">CONNECT</div>
+            <div class="wrap">
+                <div class="s-head">
+                    <span class="mono" data-b="type" data-l="Scene"><b>Scene 09</b> — Open to opportunities worldwide</span>
+                    <h2 class="s-title" data-b="type" data-l="Heading">Let's connect <span class="sl">/</span></h2>
+                </div>
+                <a class="big-mail" href="mailto:poovaragavan2004@gmail.com" data-b="type" data-l="Email">poovaragavan2004@gmail.com</a>
+                <div class="links">
+                    <div>
+                        <a class="lnk" href="https://github.com/poova-dev" target="_blank" rel="noopener" data-b="frame" data-l="GitHub"><span>GitHub</span><span class="mono">@poova-dev ↗</span></a>
+                        <a class="lnk" href="https://www.linkedin.com/in/poova-ragavan/" target="_blank" rel="noopener" data-b="frame" data-l="LinkedIn"><span>LinkedIn</span><span class="mono">poova-ragavan ↗</span></a>
+                        <a class="lnk" href="https://poovaragavan.ccbp.tech/" target="_blank" rel="noopener" data-b="frame" data-l="Portfolio"><span>Portfolio</span><span class="mono">poovaragavan.ccbp.tech ↗</span></a>
+                        <a class="lnk" href="https://flyggo.com" target="_blank" rel="noopener" data-b="frame" data-l="Flyggo"><span>Flyggo</span><span class="mono">Full Stack Developer ↗</span></a>
+                    </div>
+                    <div>
+                        <h3 class="h3m mono" data-b="type" data-l="Label">/ Interests &amp; Focus</h3>
+                        <div class="chips" data-b="pop" data-l="Hobbies">
+                            <span>Full Stack Web</span><span>React Development</span><span>AI Applications</span><span>API Architecture</span><span>UI/UX Design</span><span>Firebase Cloud</span><span>Open Source</span><span>Tamil Nadu Tech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== END CREDITS ===== -->
+        <footer class="credits" id="credits">
+            <p class="mono acc" style="margin-bottom:22px">● Build complete</p>
+            <div class="the-end" id="theEnd" aria-label="The End"><span class="ln">The</span> <span class="ln o">End</span></div>
+            <dl>
+                <div><dt>Directed &amp; engineered by</dt><dd>Poovaragavan A</dd></div>
+                <div><dt>Built live by</dt><dd><span style="color:var(--a1)">Agent-01</span> layout - <span style="color:var(--a2)">Agent-02</span> type - <span style="color:var(--a3)">Agent-03</span> media</dd></div>
+                <div><dt>Location</dt><dd>Tamil Nadu, India</dd></div>
+                <div><dt>Prefer it quiet?</dt><dd><a href="https://poovaragavan.ccbp.tech/" class="acc" target="_blank" rel="noopener">Classic portfolio ↗</a></dd></div>
+            </dl>
+            <div class="wrap"><div class="copy mono"><span>© 2026 Poovaragavan A — All rights reserved</span><span>Full Stack Developer / Tamil Nadu, India</span></div></div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

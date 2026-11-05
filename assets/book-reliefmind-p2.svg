@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="533" viewBox="0 0 400 533">
+      <rect width="400" height="533" fill="#191330"/>
+      <rect x="25" y="25" width="350" height="483" fill="#130d26" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.1"/>
+      <text x="50" y="65" font-family="monospace" font-size="10" fill="#c084fc">// SECTION 02: DATA SCHEMA</text>
+      <rect x="50" y="95" width="140" height="80" rx="4" fill="#20173d" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2"/>
+      <rect x="210" y="95" width="140" height="80" rx="4" fill="#20173d" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2"/>
+      <text x="65" y="130" font-family="monospace" font-size="11" fill="#f5f3f9">TABLE_USERS</text>
+      <text x="225" y="130" font-family="monospace" font-size="11" fill="#f5f3f9">SYNC_EVENTS</text>
+      <rect x="50" y="210" width="300" height="150" rx="4" fill="#17102e"/>
+      <text x="70" y="245" font-family="monospace" font-size="10" fill="#c084fc">SECURITY RULES ENFORCED</text>
+      <text x="70" y="280" font-family="sans-serif" font-size="12" fill="#a3a29d">Role-based access &amp; schema assertions</text>
+    </svg>

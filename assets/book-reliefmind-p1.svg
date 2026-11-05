@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="533" viewBox="0 0 400 533">
+      <rect width="400" height="533" fill="#17122a"/>
+      <rect x="25" y="25" width="350" height="483" fill="#120c22" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.1"/>
+      <text x="50" y="65" font-family="monospace" font-size="10" fill="#c084fc">// SECTION 01: SYSTEM TOPOLOGY</text>
+      <rect x="50" y="95" width="300" height="12" fill="#ffffff" fill-opacity="0.1" rx="2"/>
+      <rect x="50" y="120" width="260" height="12" fill="#ffffff" fill-opacity="0.07" rx="2"/>
+      <rect x="50" y="145" width="280" height="12" fill="#ffffff" fill-opacity="0.07" rx="2"/>
+      <rect x="50" y="190" width="300" height="180" fill="#1c1436" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3" rx="4"/>
+      <text x="70" y="230" font-family="monospace" font-size="12" fill="#c084fc">CORE PIPELINE BENCHMARKS</text>
+      <path d="M 70 320 Q 150 250, 220 280 T 320 240" fill="none" stroke="#c084fc" stroke-width="2"/>
+      <text x="50" y="420" font-family="monospace" font-size="11" fill="#a3a29d">P99 Latency &lt; 240ms</text>
+    </svg>

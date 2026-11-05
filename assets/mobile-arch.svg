@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750" viewBox="0 0 600 750">
+      <defs>
+        <radialGradient id="rg_mobile-arch.svg" cx="50%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="#1f143d"/>
+          <stop offset="100%" stop-color="#07040f"/>
+        </radialGradient>
+      </defs>
+      <rect width="600" height="750" fill="url(#rg_mobile-arch.svg)"/>
+      <rect x="25" y="25" width="550" height="700" fill="none" stroke="#e879f9" stroke-width="1.5" stroke-opacity="0.3"/>
+      
+      <!-- Grid pattern -->
+      <line x1="25" y1="120" x2="575" y2="120" stroke="#e879f9" stroke-width="1" stroke-opacity="0.2"/>
+      <text x="50" y="80" font-family="monospace" font-size="14" fill="#e879f9" letter-spacing="2">// PRODUCTION</text>
+      <text x="50" y="102" font-family="monospace" font-size="11" fill="#7a7975">STATUS: RUNNING · 2026</text>
+
+      <!-- Center graphic -->
+      <g transform="translate(100, 200)">
+        <rect width="400" height="300" rx="12" fill="#140c2b" stroke="#e879f9" stroke-width="2" stroke-opacity="0.5"/>
+        <text x="30" y="50" font-family="monospace" font-size="18" fill="#e879f9">› React & Node Microservices</text>
+        <rect x="30" y="80" width="340" height="12" rx="3" fill="#ffffff" fill-opacity="0.1"/>
+        <rect x="30" y="110" width="280" height="12" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+        <rect x="30" y="140" width="310" height="12" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+        <rect x="30" y="170" width="220" height="12" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+        <rect x="30" y="210" width="160" height="36" rx="6" fill="#e879f9" fill-opacity="0.2" stroke="#e879f9" stroke-width="1"/>
+        <text x="50" y="234" font-family="monospace" font-size="13" font-weight="bold" fill="#f5f3f9">EXECUTE</text>
+      </g>
+      
+      <text x="50" y="600" font-family="sans-serif" font-weight="900" font-size="32" fill="#f5f3f9">Flyggo Web Platform</text>
+      <text x="50" y="635" font-family="monospace" font-size="13" fill="#a3a29d">Poovaragavan A · Workspace Artifact</text>
+    </svg>

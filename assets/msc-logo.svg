@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <rect width="80" height="80" rx="12" fill="#120e24"/>
+  <circle cx="40" cy="40" r="28" stroke="#818cf8" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M28 48 L40 24 L52 48 M34 40 L46 40" stroke="#c084fc" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <text x="40" y="62" font-family="monospace" font-size="9" font-weight="bold" fill="#f5f3f9" text-anchor="middle" letter-spacing="1">M.SC</text>
+</svg>
