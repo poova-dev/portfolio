@@ -368,7 +368,14 @@
             .to('.hero', { opacity: 0, duration: .35 }, .65 + .35);
 
         // ghost words parallax
-        $$('.ghost').forEach(g => gsap.fromTo(g, { xPercent: 8 }, { xPercent: -16, ease: 'none', scrollTrigger: { trigger: g.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } }));
+        $$('.ghost').forEach(g => {
+            const isPhil = g.closest('#philosophy');
+            const yVal = isPhil ? -50 : 0;
+            gsap.fromTo(g,
+                { xPercent: 5, yPercent: yVal },
+                { xPercent: 0, yPercent: yVal, ease: 'none', scrollTrigger: { trigger: g.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } }
+            );
+        });
 
         // ticker band driven by scroll
         gsap.fromTo('#trk1', { xPercent: 0 }, { xPercent: -33.3, ease: 'none', scrollTrigger: { trigger: '.ticker', start: 'top bottom', end: 'bottom top', scrub: true } });
